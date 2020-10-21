@@ -7,6 +7,7 @@ public class Fornecedor {
 	private String endereco;
 	private String telefone;
 	
+	public Fornecedor(){};
 	public Fornecedor(String cnpj, String nomeEmpresa, String endereco, String telefone) {
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;

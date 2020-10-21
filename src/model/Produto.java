@@ -4,14 +4,15 @@ public class Produto {
     private String codigo;
     private String nome;
     private String categoria;
-    private int peso;
+    private double peso;
     private String fabricante;
     private String modelo;
-    private String dimensaoAltura;
-    private String dimensaoComprimento;
-    private String dimensaoProfundidade;
+    private double dimensaoAltura;
+    private double dimensaoComprimento;
+    private double dimensaoProfundidade;
     
-    public Produto(String codigo, String nome, String categoria, int peso, String fabricante, String modelo, String dimensaoAltura, String dimensaoComprimento, String dimensaoProfundidade){
+    public Produto(){};
+    public Produto(String codigo, String nome, String categoria, double peso, String fabricante, String modelo, double dimensaoAltura, double dimensaoComprimento, double dimensaoProfundidade){
         this.codigo = codigo;
         this.nome = nome;
         this.categoria = categoria;
@@ -70,14 +71,14 @@ public class Produto {
     /**
      * @return int return the peso
      */
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
     /**
      * @param peso the peso to set
      */
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 
@@ -112,42 +113,42 @@ public class Produto {
     /**
      * @return String return the dimensaoAltura
      */
-    public String getDimensaoAltura() {
+    public double getDimensaoAltura() {
         return dimensaoAltura;
     }
 
     /**
      * @param dimensaoAltura the dimensaoAltura to set
      */
-    public void setDimensaoAltura(String dimensaoAltura) {
+    public void setDimensaoAltura(double dimensaoAltura) {
         this.dimensaoAltura = dimensaoAltura;
     }
 
     /**
      * @return String return the dimensaoComprimento
      */
-    public String getDimensaoComprimento() {
+    public double getDimensaoComprimento() {
         return dimensaoComprimento;
     }
 
     /**
      * @param dimensaoComprimento the dimensaoComprimento to set
      */
-    public void setDimensaoComprimento(String dimensaoComprimento) {
+    public void setDimensaoComprimento(double dimensaoComprimento) {
         this.dimensaoComprimento = dimensaoComprimento;
     }
 
     /**
      * @return String return the dimensaoProfundidade
      */
-    public String getDimensaoProfundidade() {
+    public double getDimensaoProfundidade() {
         return dimensaoProfundidade;
     }
 
     /**
      * @param dimensaoProfundidade the dimensaoProfundidade to set
      */
-    public void setDimensaoProfundidade(String dimensaoProfundidade) {
+    public void setDimensaoProfundidade(double dimensaoProfundidade) {
         this.dimensaoProfundidade = dimensaoProfundidade;
     }
     public void printaProduto() {

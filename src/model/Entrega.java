@@ -1,46 +1,49 @@
 package model;
 
 public class Entrega {
-    private String enderecoA;
-    private String enderecoB;
+    private Usuario usuario;
+    private Fornecedor fornecedor;
+    private Entregador entregador;
     private double valor;
     private String codigoProduto;
     
     
-    Entrega(String enderecoA, String enderecoB, double valor,String codigoProduto){
-        this.enderecoA = enderecoA;
-        this.enderecoB = enderecoB;
+    public Entrega(Usuario usuario, Fornecedor fornecedor, Entregador entregador, double valor, String codigoProduto){
+        this.usuario = usuario;
+        this.fornecedor = fornecedor;
+        this.entregador = entregador;
         this.valor = valor;
         this.codigoProduto = codigoProduto;
     }
 
+    
 
     /**
-     * @return String return the enderecoA
+     * @return Usuario return the usuario
      */
-    public String getEnderecoA() {
-        return enderecoA;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
     /**
-     * @param enderecoA the enderecoA to set
+     * @param usuario the usuario to set
      */
-    public void setEnderecoA(String enderecoA) {
-        this.enderecoA = enderecoA;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
     /**
-     * @return String return the enderecoB
+     * @return Fornecedor return the fornecedor
      */
-    public String getEnderecoB() {
-        return enderecoB;
+    public Fornecedor getFornecedor() {
+        return fornecedor;
     }
 
     /**
-     * @param enderecoB the enderecoB to set
+     * @param fornecedor the fornecedor to set
      */
-    public void setEnderecoB(String enderecoB) {
-        this.enderecoB = enderecoB;
+    public void setFornecedor(Fornecedor fornecedor) {
+        this.fornecedor = fornecedor;
     }
 
     /**
@@ -71,10 +74,14 @@ public class Entrega {
         this.codigoProduto = codigoProduto;
     }
 
+
     public void printarEntrega() {
-		System.out.println("EnderecoA: " + this.enderecoA);
-		System.out.println("EnderecoB: " + this.enderecoB);
+		System.out.println("Usuario: " + this.usuario.getNome());
+		System.out.println("Fornecedor: " + this.fornecedor.getNomeEmpresa());
+		System.out.println("Entregador: " + this.entregador.getNome());
 		System.out.println("Valor: " + this.valor);
 		System.out.println("Codigo do Produto: " + this.codigoProduto);
-	}
+    }
+
+
 }
