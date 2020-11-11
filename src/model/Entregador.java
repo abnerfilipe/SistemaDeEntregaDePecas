@@ -1,8 +1,6 @@
 package model;
 
-// import java.time.LocalDate;
-
-public class Entregador extends Usuario {
+public class Entregador extends Usuario implements Motorista{
 	private int identificacao;
 
 	public Entregador(int identificacao) {
@@ -28,5 +26,32 @@ public class Entregador extends Usuario {
 		super.printarUsuario();
 		System.out.println("Identificacao: " + this.identificacao);
 	}
+
+	// Interface methods
+
+	@Override
+	public void cadastrarVeiculo(String placa) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void cadastrarCNH(int CNH) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void cadastrarCategoria(String categoria) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public int rodizioPlaca() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 
 }
