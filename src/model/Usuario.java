@@ -2,7 +2,7 @@ package model;
 
 // import java.time.LocalDate;
 
-public class Usuario {
+public abstract class Usuario {
 		private String nome;
 		private String sexo;
 		private String endereco;
@@ -57,13 +57,13 @@ public class Usuario {
 		}
 		
 		public void printarUsuario() {
-			// TODO Auto-generated method stub
-			System.out.println("Nome: " + this.nome);
-			System.out.println("Sexo: " + this.sexo);
-			System.out.println("Endere�o : " + this.endereco);
-			System.out.println("Telefone : " + this.telefone);
-			System.out.println("Data de nascimento : " + this.dataNascimento);
-			System.out.println("CPF : " + this.cpf);
-			System.out.println(" \n");
+			System.out.println("========Ficha: Usuario=========");
+			System.out.println("Nome: " + this.getNome());
+			System.out.println("Sexo: " + this.getSexo());
+			System.out.println("Endereco : " + this.getEndereco());
+			System.out.println("Telefone : " + this.getTelefone());
+			System.out.println("Data de nascimento : " + this.getDataNascimento());
+			System.out.println("CPF : " + this.getCpf());
+			System.out.println("=================================");
 		}
 }

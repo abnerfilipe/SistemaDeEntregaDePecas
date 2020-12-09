@@ -1,11 +1,14 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Fornecedor {
 	
 	private String cnpj;
 	private String nomeEmpresa;
 	private String endereco;
 	private String telefone;
+	private ArrayList<Produto> produtos = new ArrayList<Produto>();
 	
 	public Fornecedor(){};
 	public Fornecedor(String cnpj, String nomeEmpresa, String endereco, String telefone) {
@@ -40,14 +43,26 @@ public class Fornecedor {
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
 	}
-	
+
+	public ArrayList<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProduto(Produto produto) {
+		this.produtos.add(produto);
+	}
+
 	public void printarFornecedor() {
+		System.out.println("========Ficha: Fornecedor=========");
 		System.out.println("Fornecedor: " + this.nomeEmpresa);
 		System.out.println("CNPJ: " + this.cnpj);
-		System.out.println("Endere�o: " + this.endereco);
+		System.out.println("Endereco: " + this.endereco);
 		System.out.println("Telefone: " + this.telefone);
+		for (Produto produto : produtos) {
+			produto.printaProduto();
+		}
+        System.out.println("=================================");
 	}
-	
 
 	
 }

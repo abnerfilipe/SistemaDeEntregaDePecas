@@ -152,15 +152,16 @@ public class Produto {
         this.dimensaoProfundidade = dimensaoProfundidade;
     }
     public void printaProduto() {
-        // TODO Auto-generated method stub
-        System.out.println("Nome: " + this.nome);
-        System.out.println("Categoria: " + this.categoria);
-        System.out.println("Peso: " + this.peso);
-        System.out.println("Fabricante: " + this.fabricante);
-        System.out.println("Modelo: " + this.modelo);
-        System.out.println("DimensaoAltura: " + this.dimensaoAltura);
-        System.out.println("DimensaoComprimento: " + this.dimensaoComprimento);
-        System.out.println("DimensaoProfundidade: " + this.dimensaoProfundidade);
+        System.out.println("========Ficha: Produto=========");
+        System.out.println("Nome: " + this.getNome());
+        System.out.println("Categoria: " + this.getCategoria());
+        System.out.println("Peso: " + this.getPeso());
+        System.out.println("Fabricante: " + this.getFabricante());
+        System.out.println("Modelo: " + this.getModelo());
+        System.out.println("DimensaoAltura: " + this.getDimensaoAltura());
+        System.out.println("DimensaoComprimento: " + this.getDimensaoComprimento());
+        System.out.println("DimensaoProfundidade: " + this.getDimensaoProfundidade());
+        System.out.println("=================================");
     }
 
 

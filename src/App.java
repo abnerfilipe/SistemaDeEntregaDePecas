@@ -1,6 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
+import model.Cliente;
 import model.Entrega;
 import model.Entregador;
 import model.Fornecedor;
@@ -12,7 +13,6 @@ public class App {
 	public static void main (String[]args) {
 		int op = 0;
 		Scanner scan = new Scanner(System.in);
-		Usuario cliente = new Usuario();
 		Fornecedor fornecedor = new Fornecedor();
 		Produto produto = new Produto();
 		Random identificacao = new Random();
@@ -30,12 +30,22 @@ public class App {
 			switch (op) {
 				case 1:
 					// cliente 
-					setardDadosCliente(cliente);
+					Cliente cliente = new Cliente(null, null, null, null, null, null);
+					System.out.println("Digite o nome do cliente:");
+					cliente.setNome(scan.nextLine());
+					System.out.println("Digite um endereco:");
+					cliente.setEndereco(scan.nextLine());
+					System.out.println("Digite o telefone:");
+					cliente.setTelefone(scan.nextLine());
+					System.out.println("Digite o cpf:");
+					cliente.setCpf(scan.nextLine());
+					System.out.println("Digite o data de nascimento:");
+					cliente.setDataNascimento(scan.nextLine());
+					System.out.println(" \n");
 					cliente.printarUsuario();
 					break;
 				case 2:
 					// entregador
-					
 					setarDadosEntregador(entregador);
 					entregador.printaEntregador();
 					break;
@@ -72,27 +82,11 @@ public class App {
 		System.out.println("Digite o valor da entrega:");
 		double valor = scan.nextDouble();
 		Entrega entrega = new Entrega(_cliente,_fornecedor, _entregador, valor, _produto.getCodigo());
-		// System.out.println(" \n");
-		// scan.close();
+		System.out.println(" \n");
+		scan.close();
 		return entrega;
 	}
 
-	private static void setardDadosCliente(Usuario cliente) {
-	
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Digite o nome do cliente:");
-		cliente.setNome(scan.nextLine());
-		System.out.println("Digite um endereco:");
-		cliente.setEndereco(scan.nextLine());
-		System.out.println("Digite o telefone:");
-		cliente.setTelefone(scan.nextLine());
-		System.out.println("Digite o cpf:");
-		cliente.setCpf(scan.nextLine());
-		System.out.println("Digite o data de nascimento:");
-		cliente.setDataNascimento(scan.nextLine());
-		// System.out.println(" \n");
-		// scan.close();
-	}
 
 	public static void setarDadosEntregador(Entregador entregador) {
 		Scanner scan = new Scanner(System.in);
@@ -107,7 +101,7 @@ public class App {
 		System.out.println("Digite o data de nascimento:");
 		entregador.setDataNascimento(scan.nextLine());
 		System.out.println(" \n");
-		// scan.close();
+		scan.close();
 	}    
 
 
@@ -132,7 +126,7 @@ public class App {
 		System.out.println("Digite a profundidade:");
 		produto.setDimensaoProfundidade(scan.nextDouble());
 		System.out.println(" \n");
-		// scan.close();
+		scan.close();
 	}
 	public static void setarDadosFornecedor(Fornecedor fornecedor) {
 		Scanner scan = new Scanner(System.in);
@@ -145,6 +139,6 @@ public class App {
 		System.out.println("Digite o telefone:");
 		fornecedor.setTelefone(scan.nextLine());
 		System.out.println(" \n");
-		// scan.close();
+		scan.close();
 	}
 }
