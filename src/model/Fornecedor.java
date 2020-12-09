@@ -10,7 +10,6 @@ public class Fornecedor {
 	private String telefone;
 	private ArrayList<Produto> produtos = new ArrayList<Produto>();
 	
-	public Fornecedor(){};
 	public Fornecedor(String cnpj, String nomeEmpresa, String endereco, String telefone) {
 		this.cnpj = cnpj;
 		this.nomeEmpresa = nomeEmpresa;

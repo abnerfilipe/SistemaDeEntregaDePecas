@@ -11,7 +11,6 @@ public class Produto {
     private double dimensaoComprimento;
     private double dimensaoProfundidade;
     
-    public Produto(){};
     public Produto(String codigo, String nome, String categoria, double peso, String fabricante, String modelo, double dimensaoAltura, double dimensaoComprimento, double dimensaoProfundidade){
         this.codigo = codigo;
         this.nome = nome;

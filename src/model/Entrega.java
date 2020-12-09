@@ -14,6 +14,7 @@ public class Entrega {
         this.entregador = entregador;
         this.valor = valor;
         this.produto = produto;
+        this.entregador.setEntrega(this);
     }
     public Cliente getCliente() {
         return cliente;
